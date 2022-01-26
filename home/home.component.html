@@ -1,0 +1,13 @@
+<div class="card-columns">
+  <div class="card" *ngFor="let frinadise of friandisesList$ | async">
+    <div class="card-body">
+      <h5 class="card-title">{{frinadise.brand}}</h5>
+      <h6 class="card-subtitle mb-2 text-muted">
+        <span *ngIf="frinadise.cat.toLocaleLowerCase()=='choco'"><span class="brune">Essayez cette friandise chocolatée de :</span></span>
+        <span *ngIf="frinadise.cat.toLocaleLowerCase()=='chips'"><span class="rouge"> Essayez ces croustilles délicieuses de :</span></span>
+      </h6>
+      <p class="card-text">{{frinadise.compagnie}}</p>
+      <p class="card-text">Prix: {{frinadise.price}}$</p>
+    </div>
+  </div>
+</div>
